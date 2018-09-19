@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ PROJECT LICENSE
+  ~
+  ~ This project was submitted by Sivan Chakravarthy as part of the Nanodegree At Udacity.
+  ~
+  ~ As part of Udacity Honor code, your submissions must be your own work, hence
+  ~ submitting this project as yours will cause you to break the Udacity Honor Code
+  ~ and the suspension of your account.
+  ~
+  ~ Me, the author of the project, allow you to check the code as a reference, but if
+  ~ you submit it, it's your own responsibility if you get expelled.
+  ~
+  ~ Copyright (c) 2017 Sivan Chakravarthy
+  ~
+  ~ Besides the above notice, the following license applies and this license notice
+  ~ must be included in all works derived from this project.
+  ~
+  ~ MIT License
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  ~
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        app:cardElevation="10dp">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/Q1_heading"
+                    style="@style/Headings"
+                    android:text="Question 1 " />
+
+                <TextView
+                    android:id="@+id/Q1_ques"
+                    style="@style/Questions"
+                    android:layout_below="@+id/Q1_heading"
+                    android:text="Which is the only Indian Club to have played in an AFC CUP Final?" />
+
+                <RadioGroup
+                    android:id="@+id/rg_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Q1_ques"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <RadioButton
+                        android:id="@+id/Q1_op1_mb"
+                        style="@style/Options"
+                        android:layout_below="@+id/Q1_ques"
+                        android:text="Mohun Bagan" />
+
+                    <RadioButton
+                        android:id="@+id/Q1_op2_bfc"
+                        style="@style/Options"
+                        android:layout_below="@+id/Q1_ques"
+                        android:layout_toRightOf="@+id/Q1_op1_mb"
+                        android:text="Bengaluru FC" />
+
+
+                </RadioGroup>
+
+
+                <TextView
+                    android:id="@+id/Q2_heading"
+                    style="@style/Headings"
+                    android:layout_below="@+id/rg_1"
+                    android:text="Question 2 " />
+
+                <TextView
+                    android:id="@+id/Q2_ques"
+                    style="@style/Questions"
+                    android:layout_below="@+id/Q2_heading"
+                    android:text="Which of the below players have had more than 100 caps for their National Team?" />
+
+
+                <RadioGroup
+                    android:id="@+id/rg_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/Q2_ques"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:paddingBottom="10dp">
+
+                    <CheckBox
+                        android:id="@+id/Q2_ans_gss"
+                        style="@style/Options"
+                        android:text="Gurpreet Singh Sandhu" />
+
+                    <CheckBox
+                        android:id="@+id/Q2_ans_sc"
+                        style="@style/Options"
+                        android:text="Sunil Chhetri" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:id="@+id/rg_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rg_3"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:paddingBottom="10dp">
+
+                    <CheckBox
+                        android:id="@+id/Q2_ans_mb"
+                        style="@style/Options"
+                        android:text="Michael Ballack " />
+
+                    <CheckBox
+                        android:id="@+id/Q2_ans_db"
+                        style="@style/Options"
+                        android:text="David Beckham" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/Q3_heading"
+                    style="@style/Headings"
+                    android:layout_below="@+id/rg_4"
+                    android:text="Question 3" />
+
+
+                <TextView
+                    android:id="@+id/Q3_ques"
+                    style="@style/Questions"
+                    android:layout_below="@+id/Q3_heading"
+                    android:text="Who is the only Indian player to have played in the Europa League?" />
+
+
+                <RadioGroup
+                    android:id="@+id/rg_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Q3_ques"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <RadioButton
+                        android:id="@+id/Q3_op1_gss"
+                        style="@style/Options"
+                        android:layout_below="@+id/Q3_ques"
+                        android:text="Gurupreet Singh Sandhu" />
+
+                    <RadioButton
+                        android:id="@+id/Q3_op2_sc"
+                        style="@style/Options"
+                        android:layout_below="@+id/Q1_ques"
+                        android:layout_toRightOf="@+id/Q1_op1_mb"
+                        android:text="Sunil Chhetri" />
+
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/Q4_heading"
+                    style="@style/Headings"
+                    android:layout_below="@+id/rg_5"
+                    android:text="Question 4" />
+
+                <TextView
+                    android:id="@+id/Q4_ques"
+                    style="@style/Questions"
+                    android:layout_below="@+id/Q4_heading"
+                    android:text="How many goals has Sunil Chhetri scored in his national team colors? 81, 64, 51 or 75?" />
+
+
+                <EditText
+                    android:id="@+id/Q4_ans_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Q4_ques"
+                    android:hint="Enter your answer here"
+                    android:inputType="numberSigned"
+                    android:padding="14dp" />
+
+
+                <TextView
+                    android:id="@+id/Q5_heading"
+                    style="@style/Headings"
+                    android:layout_below="@+id/Q4_ans_edittext"
+                    android:text="Question 5" />
+
+                <TextView
+                    android:id="@+id/Q5_ques"
+                    style="@style/Questions"
+                    android:layout_below="@+id/Q5_heading"
+                    android:text="Who is the fastest Indian Goal scorer in all competitions?" />
+
+
+                <RadioGroup
+                    android:id="@+id/rg_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Q5_ques"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <RadioButton
+                        android:id="@+id/Q5_ans_imv"
+                        style="@style/Options"
+                        android:layout_below="@+id/rg_6"
+                        android:text="I.M Vijayan" />
+
+                    <RadioButton
+                        android:id="@+id/Q5_ans_srn"
+                        style="@style/Options"
+                        android:layout_below="@+id/rg_6"
+                        android:layout_toRightOf="@+id/Q5_ans_imv"
+                        android:text="Syed Rahim Nabi" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/Q6_heading"
+                    style="@style/Headings"
+                    android:layout_below="@+id/rg_6"
+                    android:text="Question 6" />
+
+                <TextView
+                    android:id="@+id/Q6_ques"
+                    style="@style/Questions"
+                    android:layout_below="@+id/Q6_heading"
+                    android:text="Who is the highest goal scorer for the Indian Arrows in the 2017-18 season?" />
+
+                <RadioGroup
+                    android:id="@+id/rg_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Q6_ques"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <RadioButton
+                        android:id="@+id/Q6_ans_as"
+                        style="@style/Options"
+                        android:layout_below="@+id/rg_6"
+                        android:text="Abhijit Sarkar" />
+
+                    <RadioButton
+                        android:id="@+id/Q6_ans_ss"
+                        style="@style/Options"
+                        android:layout_below="@+id/rg_6"
+                        android:layout_toRightOf="@+id/Q6_ans_as"
+                        android:text="Sanjeev Stalin" />
+
+                </RadioGroup>
+
+
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/rg_7"
+                    android:onClick="submit"
+                    android:text="Submit" />
+
+            </RelativeLayout>
+
+
+        </ScrollView>
+
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>
