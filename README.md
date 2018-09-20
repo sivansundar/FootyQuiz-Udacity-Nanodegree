@@ -1,12 +1,12 @@
-Footy-Quiz-UdacityNanoDegree
+# Footy-Quiz-UdacityNanoDegree
 A basic quiz app for the Udacity Nanodegree program.
 
 Footy Quiz is an app which was developed of the Udacity Nanodegree program
 
-##Android Goodies
-CardViews
-Radio Buttons
-RadioGroups
+## Android Goodies
+1. CardViews
+2. Radio Buttons
+3. RadioGroups
 CheckBoxes
 Logs
 Toasts
