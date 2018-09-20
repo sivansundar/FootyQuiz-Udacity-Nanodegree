@@ -7,9 +7,9 @@ Footy Quiz is an app which was developed of the Udacity Nanodegree program
 1. CardViews
 2. Radio Buttons
 3. RadioGroups
-CheckBoxes
-Logs
-Toasts
+4. CheckBoxes
+5. Logs
+6. Toasts
 
 Screenshots
 
